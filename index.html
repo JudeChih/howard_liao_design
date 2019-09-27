@@ -5,12 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="css/lab/all.min.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/pages/index.css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/602c9b9db5.js" crossorigin="anonymous"></script>
+    <script src="js/cycle2.min.js"></script>
 </head>
 <body>
-    <i class="fab fa-facebook-f"></i><i class="fab fa-instagram"></i><i class="fab fa-youtube"></i><i class="fal fa-map-marker-alt"></i><i class="fal fa-phone"></i><i class="fal fa-envelope"></i>
+    <div class="wrapper">
+        <div id="viewport">
+            <div class="item">
+                <div class="img" data-url="image/pic_01.jpg"></div>
+            </div>
+            <div class="item">
+                <div class="img" data-url="image/pic_02.jpg"></div>
+            </div>
+            <div class="item">
+                <div class="img" data-url="image/pic_03.jpg"></div>
+            </div>
+            <div class="item">
+                <div class="img" data-url="image/pic_04.jpg"></div>
+            </div>
+            <div class="item">
+                <div class="img" data-url="image/pic_05.jpg"></div>
+            </div>
+        </div>
+    </div>
 </body>
+<script>
+    $('#viewport .img').each(function(){
+        $(this).css({'background-image':'url('+$(this).data('url')+')'});
+    })
+    
+    var num = 0;
+    $('.item').eq(num).show();
+    setInterval(function(){
+        $('.item').eq(num).fadeOut(1000);
+        num++;
+        if(num >= $('.item').length){
+            num = 0;
+        }
+        $('.item').eq(num).fadeIn(1000);
+        console.log(num)
+    },12000);
+
+    $(window).resize(function(){
+        console.log($(window).width());
+        $('#viewport .img').css({'width':$(window).width()});
+    })
+</script>
 </html>

@@ -1,0 +1,13 @@
+/* line 2, ../../sass/pages/index.scss */
+.wrapper .item {
+  position: absolute;
+  display: none;
+}
+/* line 5, ../../sass/pages/index.scss */
+.wrapper .item .img {
+  -webkit-animation: imageAnimation 36s infinite linear;
+  animation: imageAnimation 36s infinite linear;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+}
