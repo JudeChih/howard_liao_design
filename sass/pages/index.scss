@@ -1,12 +1,107 @@
-.wrapper{
-    .item{
-        position: absolute;
-        display: none;
-        .img{
-            -webkit-animation:imageAnimation 36s infinite linear;animation:imageAnimation 36s infinite linear;
-            width: 100%;
-            height:100%;
-            background-position: center;
+@charset "utf-8";
+#first_page{
+    position: fixed;
+    top: 0;
+    z-index: 7;
+    width: 100%;
+    height: 100%;
+    height: 100vh;
+    display: table;
+    text-align: center;
+    div{
+        background-color: #e5e5e5;
+        display: table-cell;
+        height: 100vh;
+        width: 100%;
+        vertical-align: middle;
+        img{
+            transition: all 1s;
+            width:308px;
         }
     }
 }
+
+@media screen and (min-width: 768px) and (max-width:1024px) {
+    #first_page div img {
+        width:270px;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width:767px) {
+    #first_page div img {
+        width: 232px;
+    }
+}
+
+@media screen and (max-width:479px) {
+    #first_page div img {
+        width: 194px;
+    }
+}
+#viewport{
+    // 背景圖幻燈片
+    .index_slider{
+        width: 100%;
+        min-height:1080px;
+        position: absolute;
+        z-index: -1;
+        .slider_item{
+            width: 100%;
+            min-height:1080px;
+            overflow:hidden;
+            position: absolute;
+            display: none;
+            .slider_img{
+                -webkit-animation:imageAnimation 36s infinite linear;
+                animation:imageAnimation 36s infinite linear;
+                width: 100%;
+                min-height:1080px;
+                background-position: center;
+            }
+        }
+        // 文字幻燈片
+        .word_slider{
+            width: 591px;
+            position: absolute;
+            top: 254px;
+            right: 100px;
+            .word_item{
+                display: none;
+                span{
+                    display: block;
+                }
+                .word_title{
+                    font-family: "AmsiPro-Black", serif;
+                    text-align: right;
+                    font-size: 47px;
+                    color: white;
+                    text-shadow: 4px 9px 4px rgba(0,0,0,.15);
+                }
+                .word_content{
+                    font-family: "Arial", serif;
+                    font-size: 19px;
+                    color: white;
+                    text-align: right;
+                    margin-top: 10px;
+                }
+            }
+            .ws01{
+                position: absolute;
+            }
+            .ws02{
+                position: absolute;
+                top: 64px;
+                right: 118px;
+                width: 591px;
+                .word_title{
+                    opacity: 0.67;
+                }
+                .word_content{
+                    opacity: 0.67;
+                }
+            }
+        }
+    }
+
+}
+

@@ -16,5 +16,7 @@
 
 + facebook <i class="fab fa-facebook-f"></i>
 + Instagram <i class="fab fa-instagram"></i><i class="fab fa-youtube"></i>
-+ contant us <i class="fal fa-map-marker-alt"></i><i class="fal fa-phone"></i><i class="fal fa-envelope"></i>
-+ close <i class="fal fa-times"></i>
++ contant us <i class="fal fa-map-marker-alt"></i><i class="fal fa-phone"></i><i class="fal fa-envelope"></i> <!-- 需收費 -->
++ 替代 <i class="fas fa-map-marker-alt"><i class="fas fa-phone"></i></i><i class="far fa-envelope"></i>
++ close <i class="fal fa-times"></i> <!-- 需收費 -->
++ 替代 <i class="fas fa-times"></i>

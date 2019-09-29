@@ -1,24 +1,103 @@
-/* line 1, ../sass/layout.scss */
-body, html {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-}
-/* line 5, ../sass/layout.scss */
-body .wrapper, html .wrapper {
-  width: 100%;
-  height: 100%;
+@import url("https://fonts.googleapis.com/css?family=Hind&display=swap");
+@font-face {
+  font-family: 'AmsiPro-Black';
+  src: url("/font/AmsiPro-Black.ttf");
 }
 /* line 8, ../sass/layout.scss */
-body .wrapper #viewport, html .wrapper #viewport {
+body, html {
+  min-height: 1080px;
   width: 100%;
-  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
 }
-/* line 11, ../sass/layout.scss */
-body .wrapper #viewport .item, html .wrapper #viewport .item {
+/* line 13, ../sass/layout.scss */
+body #viewport, html #viewport {
   width: 100%;
-  height: 100%;
-  overflow: hidden;
+  min-height: 1080px;
+}
+/* line 16, ../sass/layout.scss */
+body #viewport .nav_wrap, html #viewport .nav_wrap {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  right: -357px;
+  width: 357px;
+  min-height: 1080px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+/* line 24, ../sass/layout.scss */
+body #viewport .nav_wrap .close, html #viewport .nav_wrap .close {
+  font-family: 'Hind', sans-serif;
+  color: white;
+  text-align: center;
+  position: absolute;
+  right: 47px;
+  top: 47px;
+  cursor: pointer;
+}
+/* line 32, ../sass/layout.scss */
+body #viewport .nav_wrap .close i, html #viewport .nav_wrap .close i {
+  font-size: 22px;
+}
+/* line 35, ../sass/layout.scss */
+body #viewport .nav_wrap .close span, html #viewport .nav_wrap .close span {
+  font-size: 12px;
+  display: block;
+}
+/* line 41, ../sass/layout.scss */
+body #viewport .bar_line, html #viewport .bar_line {
+  cursor: pointer;
+  z-index: 1;
+  position: fixed;
+  top: 79px;
+  right: 70px;
+  width: 30px;
+}
+/* line 48, ../sass/layout.scss */
+body #viewport .bar_line span, html #viewport .bar_line span {
+  width: 100%;
+  height: 1px;
+  display: block;
+  background-color: white;
+  margin-bottom: 10px;
+}
+/* line 54, ../sass/layout.scss */
+body #viewport .bar_line span:last-child, html #viewport .bar_line span:last-child {
+  margin-bottom: 0;
+}
+/* line 59, ../sass/layout.scss */
+body #viewport .content_wrap, html #viewport .content_wrap {
+  max-width: 1024px;
+  min-height: 1080px;
+  margin: auto;
+  position: relative;
+}
+/* line 64, ../sass/layout.scss */
+body #viewport .content_wrap #logo, html #viewport .content_wrap #logo {
+  width: 192px;
+  height: 38px;
+  position: absolute;
+  background-image: url("/image/logo.png");
+  background-size: 100%;
+  left: 15px;
+  top: 75px;
+}
+/* line 73, ../sass/layout.scss */
+body #viewport .content_wrap #link, html #viewport .content_wrap #link {
+  left: 15px;
+  position: absolute;
+  bottom: 75px;
+}
+/* line 77, ../sass/layout.scss */
+body #viewport .content_wrap #link a, html #viewport .content_wrap #link a {
+  display: inline-block;
+  line-height: 30px;
+  text-align: center;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 @-webkit-keyframes imageAnimation {

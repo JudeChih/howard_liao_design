@@ -5,53 +5,132 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="css/lab/all.min.css">
+    <link rel="stylesheet" href="/css/all.min.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/pages/index.css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="js/cycle2.min.js"></script>
 </head>
 <body>
-    <div class="wrapper">
-        <div id="viewport">
-            <div class="item">
-                <div class="img" data-url="image/pic_01.jpg"></div>
+    <div id="first_page">
+        <div>
+            <img src="image/logo.png" alt="">
+        </div>
+    </div>
+    <div id="viewport">
+        <div class="index_slider">
+            <div class="slider_item">
+                <div class="slider_img" data-url="image/pic_01.jpg"></div>
             </div>
-            <div class="item">
-                <div class="img" data-url="image/pic_02.jpg"></div>
+            <div class="slider_item">
+                <div class="slider_img" data-url="image/pic_02.jpg"></div>
             </div>
-            <div class="item">
-                <div class="img" data-url="image/pic_03.jpg"></div>
+            <div class="slider_item">
+                <div class="slider_img" data-url="image/pic_03.jpg"></div>
             </div>
-            <div class="item">
-                <div class="img" data-url="image/pic_04.jpg"></div>
+            <div class="slider_item">
+                <div class="slider_img" data-url="image/pic_04.jpg"></div>
             </div>
-            <div class="item">
-                <div class="img" data-url="image/pic_05.jpg"></div>
+            <div class="slider_item">
+                <div class="slider_img" data-url="image/pic_05.jpg"></div>
+            </div>
+            <div class="word_slider">
+                <div class="word_item ws01">
+                    <span class="word_title">ONE OF A KIN</span>
+                    <span class="word_content">HLD hopes to bring this international thought process into every single
+                            aspect of our daily lives, all while improving lift itself through design.</span>
+                </div>
+                <div class="word_item ws02">
+                    <span class="word_title">KINHOWARD LIAO DESIGN</span>
+                    <span class="word_content">HLD hopes to bring this international thought process into every single
+                            aspect of our daily lives, all while improving lift itself through design.</span>
+                </div>
+            </div>
+        </div>
+        <div class="bar_line">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav_wrap">
+            <div class="close">
+                <i class="fas fa-times"></i>
+                <span>CLOSE</span>
+            </div>
+        </div>
+        <div class="content_wrap">
+            <a id="logo" href="/index.html"></a>
+
+            <div id="link">
+                <a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a>
+                <a href="javascript:void(0)"><i class="fab fa-instagram"></i></a>
+                <a href="javascript:void(0)"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
     </div>
 </body>
 <script>
-    $('#viewport .img').each(function(){
+    //導覽列展開按鈕
+    $('.bar_line').on('click',function(){
+        $('.nav_wrap').show();
+        $('.nav_wrap').animate({'right':0},1000);
+        $(this).fadeOut(500);
+    })
+    //導覽列關閉按鈕
+    $('.close').on('click',function(){
+        $('.nav_wrap').animate({'right':'-'+$('.nav_wrap').width()},1000);
+        setTimeout(function() {
+            $('.bar_line').fadeIn(500);
+        }, 500);
+    })
+    //首頁一開始的logo頁點擊設定
+    var started = false;
+    $('#first_page').on('click',function(){
+        $(this).fadeOut(1000);
+        imgSlider();
+        started = true;
+    })
+    //首頁一開始的logo頁如果不點擊的話3秒後自動消失
+    setTimeout(function() {
+        if(!started){
+            $('#first_page').fadeOut(1000);
+            imgSlider();
+        }
+    }, 3000);
+    //設定所有幻燈片圖片路徑
+    $('#viewport .slider_img').each(function(){
         $(this).css({'background-image':'url('+$(this).data('url')+')'});
     })
     
-    var num = 0;
-    $('.item').eq(num).show();
-    setInterval(function(){
-        $('.item').eq(num).fadeOut(1000);
-        num++;
-        if(num >= $('.item').length){
-            num = 0;
-        }
-        $('.item').eq(num).fadeIn(1000);
-        console.log(num)
-    },12000);
-
+    
+    //監聽滿版幻燈片圖片的寬度
     $(window).resize(function(){
-        console.log($(window).width());
-        $('#viewport .img').css({'width':$(window).width()});
+        $('#viewport .slider_img').css({'width':$(window).width()});
     })
+
+    //首頁幻燈片效果
+    var imgSlider = function(){
+        var num = 0;
+        $('.slider_item').eq(num).show();
+        setInterval(function(){
+            $('.slider_item').eq(num).fadeOut(1000);
+            num++;
+            if(num >= $('.slider_item').length){
+                num = 0;
+            }
+            $('.slider_item').eq(num).fadeIn(1000);
+        },12000);
+
+        var word = 0;
+        $('.word_item').eq(word).show();
+        setInterval(function(){
+            $('.word_item').eq(word).fadeOut(1000);
+            word++;
+            if(word >= $('.word_item').length){
+                word = 0;
+            }
+            $('.word_item').eq(word).fadeIn(1000);
+        },12000);
+    }
 </script>
 </html>
