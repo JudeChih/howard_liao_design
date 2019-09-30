@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/all.min.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/pages/profile.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="js/style.js"></script>
+    <script src="js/profile.js"></script>
+</head>
+<body>
+    <div id="viewport" class="page_profile">
+        <div class="bar_line">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav_wrap">
+            <div class="close">
+                <i class="fas fa-times"></i>
+                <span>CLOSE</span>
+            </div>
+            <div class="nav_bar">
+                <ul>
+                    <li class="hasSubNav"><a href="javascript:void(0)">PROFILE</a></li>
+                    <li><a href="/work.html">WORKS</a></li>
+                    <li><a href="/contact.html">CONTACT US</a></li>
+                    <li><a href="/recruit.html">RECRUIT</a></li>
+                </ul>
+                <span class="copyright">© 2019 HOWARD LIAO DESIGN</span>
+            </div>
+            <div class="subnav_bar">
+                <ul>
+                    <li class="subna_title"><a href="javascript:void(0)">PROFILE</a></li>
+                    <li><a href="/profile.html?page=about">ABOUT HLD</a></li>
+                    <li><a href="/profile.html?page=news">NEWS</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content_wrap">
+            <a id="logo" href="/index.html"></a>
+            <div id="link">
+                <a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a>
+                <a href="javascript:void(0)"><i class="fab fa-instagram"></i></a>
+                <a href="javascript:void(0)"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="content_about">
+                <div class="content_header">
+                    <div class="title">ABOUT HOWARD LIAO</div>
+                    <div class="tab">
+                            <div class="about current" onclick="changeTab('about')">ABOUT HLD</div>
+                            <div class="news" onclick="changeTab('news')">NEWS</div>
+                    </div>
+                </div>
+                <div class="content_container">
+                    <div class="container_left">
+                        <span>Taking pride in leading the industry with the most advanced and progressive design concepts, Howard Liao Design (HLD) has successful executed numerous projects since its founding- from commercial spaces to hospitality venues and luxury residences.</span>
+                        <span>Consistently keeping the design concepts up to date with the latest trends while always putting the client’s demands at the forefront, HLD has consistently been able to turn those demands into high quality, uniquely designed projects. It is with this attitude, unlimited creativity, and a touch of Howard’s own style of humor in the designs that has made HLD stand out in the international design arena through the provision of positive and satisfying results to each client.</span>
+                    </div>
+                    <div class="container_right">
+                        <img src="/image/profile.jpg" alt="profile.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="content_news">
+                <div class="content_header">
+                    <div class="title">NEWS</div>
+                    <div class="tab">
+                        <div class="about" onclick="changeTab('about')">ABOUT HLD</div>
+                        <div class="news current" onclick="changeTab('news')">NEWS</div>
+                    </div>
+                </div>
+                <div class="content_container">
+                    <div class="news_item">
+                        <div class="news_image">
+                            <img src="/image/new_01.jpg" alt="">
+                        </div>
+                        <div class="news_title">
+                            <div class="date">Sep.15</div>
+                            <div class="word">廖子豪設計祝您中秋佳節愉快!</div>
+                        </div>
+                    </div>
+                    <div class="news_item">
+                        <div class="news_image">
+                            <img src="/image/new_02.jpg" alt="">
+                        </div>
+                        <div class="news_title">
+                            <div class="date">Aug.24</div>
+                            <div class="word">獲得「國際環藝創新設計華鼎獎 - 金獎」</div>
+                        </div>
+                    </div>
+                    <div class="news_item">
+                        <div class="news_image">
+                            <img src="/image/new_03.jpg" alt="">
+                        </div>
+                        <div class="news_title">
+                            <div class="date">Sep.10</div>
+                            <div class="word">獲得「2019得利空間色彩大賞」首獎「特優獎」</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="overlay">
+                    <div class="news_detail_wrap">
+                        <div class="close">
+                            <i class="fas fa-times"></i>
+                        </div>
+                        <div class="news_detail_image">
+                            <img src="/image/new_04.jpg" alt="">
+                        </div>
+                        <div class="news_detail_title">
+                            <div class="date">Sep.10</div>
+                            <div class="word">廖子豪設計祝您中秋佳節愉快!</div>
+                            <div class="content">中秋連假9.15-16連休三天</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+<script>
+    //判斷是要去哪個分頁
+    var strUrl = location.search;
+    var getPara, ParaVal;
+    var getSearch = strUrl.split("?");
+    getPara = getSearch[1].split("&");
+    ParaVal = getPara[0].split("=");
+    if(ParaVal[0] == 'page'){
+        if(ParaVal[1] == 'about'){
+            $('.content_about').fadeIn(500);
+        }else if(ParaVal[1] == 'news'){
+            $('.content_news').fadeIn(500);
+        }
+    }
+
+    //切換分頁
+    var changeTab = function(string){
+        if(string == 'about'){
+            $('.content_about').fadeIn(500);
+            $('.content_news').fadeOut(500);
+        }else if(string == 'news'){
+            $('.content_news').fadeIn(500);
+            $('.content_about').fadeOut(500);
+        }
+    }
+
+    //點擊news圖片會談出細節頁視窗
+    $('.news_item').on('click',function(){
+        $('.overlay').fadeIn(500);
+    })
+
+    //關閉細節頁
+    $('.news_detail_wrap .close').on('click',function(){
+        $('.overlay').fadeOut(500);
+    })
+    
+</script>
+</html>
