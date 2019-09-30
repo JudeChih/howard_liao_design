@@ -167,7 +167,7 @@ body #viewport .nav_wrap .subnav_bar ul li a, html #viewport .nav_wrap .subnav_b
 /* line 147, ../sass/layout.scss */
 body #viewport .bar_line, html #viewport .bar_line {
   cursor: pointer;
-  z-index: 1;
+  z-index: 10;
   position: absolute;
   top: 79px;
   right: 70px;
