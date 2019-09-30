@@ -1,0 +1,85 @@
+@charset "utf-8";
+#viewport{
+    .content_wrap{
+        .content_work{
+            position: absolute;
+            top:154px;
+            width: 100%;
+            .title{
+                font-size: 30px;
+                text-align: center;
+                margin-bottom: 26px;
+                span.line{
+                    height: 1px;
+                    width:65px;
+                    background-color: #696969;
+                }
+                span{
+                    position: relative;
+                    &:before{
+                        content:"";
+                        display: block;
+                        position: absolute;
+                        width:65px;
+                        height: 1px;
+                        background-color: #696969;
+                        left: -75px;
+                        top: 50%;
+                    }
+                    &:after{
+                        content:"";
+                        display: block;
+                        position: absolute;
+                        width:65px;
+                        height: 1px;
+                        background-color: #696969;
+                        right: -75px;
+                        top: 50%;
+                    }
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                }
+            }
+            .work_wrap{
+                font-size: 0;
+                .work_item{
+                    cursor: pointer;
+                    @media screen and (min-width: 1024px) {
+                        width:32%;
+                        margin-right:2%;
+                        margin-bottom:2%;
+                        &:nth-child(3n){
+                            margin-right: 0;
+                        }
+                    }
+
+                    @media screen and (min-width: 768px) and (max-width:1023px) {
+                        width:94%/3;
+                        margin:1%;
+                    }
+                    
+                    @media screen and (min-width: 480px) and (max-width:767px) {
+                        width:32%;
+                        margin-right:2%;
+                        margin-bottom:2%;
+                    }
+                    
+                    @media screen and (max-width:479px) {
+                        
+                    }
+                    transition: 0.5s;
+                    display: inline-block;
+                    
+                    img{
+                        width:100%;
+                    }
+                    &:hover{
+                        box-shadow:4px 4px 8px 0px rgba(0,0,0,0.36);
+                    }
+
+                }
+            }
+        }
+    }
+}

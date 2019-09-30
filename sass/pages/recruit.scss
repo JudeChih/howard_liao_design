@@ -1,0 +1,163 @@
+@charset "utf-8";
+#viewport{
+    .content_wrap{
+        .content_recruit,.content_team{
+            display: none;
+            position: absolute;
+            top:227px;
+            width:80%;
+            left: 10%;
+        }
+        .content_header{
+            position: relative;
+            .title{
+                display: inline-block;
+                font-weight: 300;
+                font-size: 30px;
+            }
+            .tab{
+                position: absolute;
+                top: calc(50% - 11px);
+                right: 0;
+                font-size: 0;
+                .recruit,.team{
+                    font-weight: 400;
+                    font-size: 14px;
+                    display: inline-block;
+                    color:white;
+                    cursor: pointer;
+                    &.current{
+                        color:#000;
+                    }
+                    &:hover{
+                        color:#000;
+                    }
+                }
+                .recruit{
+                    margin-right: 32px; 
+                    position: relative;
+                }
+                .recruit::after{
+                    content: "";
+                    cursor:default;
+                    position: absolute;
+                    width:2px;
+                    height: 20px;
+                    right: -16px;
+                    background-color: white;
+                }
+            }
+        }
+        .content_container{
+            margin-top: 43px;
+            font-size: 0;
+            position: relative;
+            // overflow: hidden;
+            .title{
+                color:white;
+                font-size: 20px;
+                margin-bottom: 26px;
+            }
+            .recruit_item{
+                color:#484747;
+                font-size: 18px;
+                margin-bottom:53px;
+                .name{
+                    font-weight: 300;
+                    font-size: 18px;
+                    font-weight: 600;
+                    color:#414141;
+                }
+                div{
+                    margin-bottom: 7px;
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                    span{
+                        margin-right: 46px;
+                        &:last-child{
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+            .overflow_wrap{
+                position: absolute;
+                font-size: 0;
+            }
+            .team_item{
+                width:23%;
+                margin:0 1%;
+                display: inline-block;
+                vertical-align: top;
+                .image{
+                    position: relative;
+                    overflow: hidden;
+                    img{
+                        width: 100%;
+                    }
+                    .card{
+                        top: 100%;
+                        position: absolute;
+                        width:100%;
+                        transition: 1s;
+                        .education{
+                            text-align: center;
+                            margin-bottom: 10%;
+                            margin-top: 25%;
+                            div:first-child{
+                                margin-bottom: 5px;
+                                span{
+                                    font-size: 14px;
+                                    padding:0 10px;
+                                    color:#fff;
+                                    border-bottom: 1px solid #fff;
+                                }
+                            }
+                            div:last-child{
+                                font-size: 12px;
+                                color:#fff;
+                            }
+                        }
+                        .experience{
+                            text-align: center;
+                            > div:first-child{
+                                margin-bottom: 5px;
+                                span{
+                                    font-size: 14px;
+                                    padding:0 10px;
+                                    color:#fff;
+                                    border-bottom: 1px solid #fff;
+                                }
+                            }
+                            div:last-child{
+                                font-size: 12px;
+                                color:#fff;
+                            }
+                        }
+                    }
+                    &:hover{
+                        .card{
+                            top:0;
+                            background-color: rgba(47,47,47,0.75);
+                        }
+                    }
+                }
+                .name_en{
+                    margin-top: 5px;
+                    text-align: center;
+                    color:#fff;
+                    font-size: 16px;
+                }
+                .name_ch{
+                    text-align: center;
+                    color:#000;
+                    font-size: 14px;
+                    span:first-child{
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

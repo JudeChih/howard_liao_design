@@ -1,0 +1,93 @@
+/* line 4, ../../sass/pages/work.scss */
+#viewport .content_wrap .content_work {
+  position: absolute;
+  top: 154px;
+  width: 100%;
+}
+/* line 8, ../../sass/pages/work.scss */
+#viewport .content_wrap .content_work .title {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 26px;
+}
+/* line 12, ../../sass/pages/work.scss */
+#viewport .content_wrap .content_work .title span.line {
+  height: 1px;
+  width: 65px;
+  background-color: #696969;
+}
+/* line 17, ../../sass/pages/work.scss */
+#viewport .content_wrap .content_work .title span {
+  position: relative;
+}
+/* line 19, ../../sass/pages/work.scss */
+#viewport .content_wrap .content_work .title span:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 65px;
+  height: 1px;
+  background-color: #696969;
+  left: -75px;
+  top: 50%;
+}
+/* line 29, ../../sass/pages/work.scss */
+#viewport .content_wrap .content_work .title span:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 65px;
+  height: 1px;
+  background-color: #696969;
+  right: -75px;
+  top: 50%;
+}
+/* line 39, ../../sass/pages/work.scss */
+#viewport .content_wrap .content_work .title span:last-child {
+  margin-right: 0;
+}
+/* line 44, ../../sass/pages/work.scss */
+#viewport .content_wrap .content_work .work_wrap {
+  font-size: 0;
+}
+/* line 46, ../../sass/pages/work.scss */
+#viewport .content_wrap .content_work .work_wrap .work_item {
+  cursor: pointer;
+  transition: 0.5s;
+  display: inline-block;
+}
+@media screen and (min-width: 1024px) {
+  /* line 46, ../../sass/pages/work.scss */
+  #viewport .content_wrap .content_work .work_wrap .work_item {
+    width: 32%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+  }
+  /* line 52, ../../sass/pages/work.scss */
+  #viewport .content_wrap .content_work .work_wrap .work_item:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* line 46, ../../sass/pages/work.scss */
+  #viewport .content_wrap .content_work .work_wrap .work_item {
+    width: 94%/3;
+    margin: 1%;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  /* line 46, ../../sass/pages/work.scss */
+  #viewport .content_wrap .content_work .work_wrap .work_item {
+    width: 32%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+  }
+}
+/* line 74, ../../sass/pages/work.scss */
+#viewport .content_wrap .content_work .work_wrap .work_item img {
+  width: 100%;
+}
+/* line 77, ../../sass/pages/work.scss */
+#viewport .content_wrap .content_work .work_wrap .work_item:hover {
+  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.36);
+}

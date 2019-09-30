@@ -6,6 +6,7 @@
 @import url('https://fonts.googleapis.com/css?family=Hind:300,400&display=swap');
 
 body,html{
+    font-family: 'Hind','Microsoft JhengHei', sans-serif;
     min-height:1080px;
     width:100%;
     margin:0;
@@ -16,7 +17,7 @@ body,html{
         &.page_contact{
             background-image: url('/image/pic_03.jpg');
         }
-        &.page_profile{
+        &.page_profile,&.page_recruit,&.page_work{
             background-color: #e1e1e1;
         }
         .nav_wrap{
@@ -29,7 +30,6 @@ body,html{
             background-color: rgba(0, 0, 0, 0.6);
             overflow: hidden;
             .close{
-                font-family: 'Hind', sans-serif;
                 font-weight: 400; 
                 letter-spacing: 1px;
                 color: white;
@@ -60,7 +60,6 @@ body,html{
                         width: 100%;
                         line-height: 63px;
                         list-style-type:none;
-                        font-family: 'Hind', sans-serif;
                         font-weight: 300;
                         font-size: 15px;
                         border-bottom: 1px solid white;
@@ -87,7 +86,6 @@ body,html{
                     }
                 }
                 .copyright{
-                    font-family: 'Hind', sans-serif;
                     font-weight: 300;
                     font-size: 15px;
                     color:white;
@@ -111,13 +109,12 @@ body,html{
                         width: 100%;
                         line-height: 63px;
                         list-style-type:none;
-                        font-family: 'Hind', sans-serif;
                         font-weight: 300;
                         font-size: 15px;
                         border-bottom: 1px solid white;
                         color:white;
                         letter-spacing: 1px;
-                        &.subna_title{
+                        &.subnav_title{
                             text-align: right;
                             
                             &:before{
@@ -150,7 +147,7 @@ body,html{
         .bar_line{
             cursor: pointer;
             z-index: 1;
-            position: fixed;
+            position: absolute;
             top: 79px;
             right: 70px;
             width:30px;

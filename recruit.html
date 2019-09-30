@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/all.min.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/pages/recruit.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="js/style.js"></script>
+    <script src="js/recruit.js"></script>
+</head>
+<body>
+    <div id="viewport" class="page_recruit">
+        <div class="bar_line">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav_wrap">
+            <div class="close">
+                <i class="fas fa-times"></i>
+                <span>CLOSE</span>
+            </div>
+            <div class="nav_bar">
+                <ul>
+                    <li class="hasSubNav" data-page='profile'><a href="javascript:void(0)">PROFILE</a></li>
+                    <li><a href="/work.html">WORKS</a></li>
+                    <li><a href="/contact.html">CONTACT US</a></li>
+                    <li class="hasSubNav" data-page='recruit'><a href="javascript:void(0)">RECRUIT</a></li>
+                </ul>
+                <span class="copyright">© 2019 HOWARD LIAO DESIGN</span>
+            </div>
+            <div class="subnav_bar">
+                <ul>
+                    <li class="subnav_title"><a href="javascript:void(0)"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content_wrap">
+            <a id="logo" href="/index.html"></a>
+            <div id="link">
+                <a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a>
+                <a href="javascript:void(0)"><i class="fab fa-instagram"></i></a>
+                <a href="javascript:void(0)"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="content_recruit">
+                <div class="content_header">
+                    <div class="title">RECRUIT</div>
+                    <div class="tab">
+                            <div class="recruit current" onclick="changeTab('recruit')">RECRUIT</div>
+                            <div class="team" onclick="changeTab('team')">TEAM INTRODUCTIO</div>
+                    </div>
+                </div>
+                <div class="content_container">
+                    <div class="title">工作機會列表</div>
+                    <div class="recruit_item">
+                        <div class="name">室內設計人員</div>
+                        <div>專科以上，三年以上工作經驗</div>
+                        <div>
+                            <span>1.熟AUTO CAD、SKETCH UP</span>
+                            <span>2.具備工地現場經驗2年以上工作經驗</span>
+                            <span>3.熟悉實施設計作業及團隊作業、善溝通、協調性佳</span>
+                        </div>
+                    </div>
+                    <div class="recruit_item">
+                        <div class="name">助理設計人員</div>
+                        <div>專科以上，一年以上工作經驗</div>
+                        <div>
+                            <span>1.熟AUTO CAD、SKETCH UP</span>
+                            <span>2.能與設計團隊共同完成室內設計工作，能團隊作業，善溝通，樂觀好學</span>
+                        </div>
+                    </div>
+                    <div class="recruit_item">
+                        <div class="name">3D室內設計</div>
+                        <div>專科以上，一年以上工作經驗</div>
+                        <div>
+                            <span>1.熟室內設計3D繪圖</span>
+                            <span>2.針對室內空間作一完整效果圖</span>
+                            <span>3.並需會使用AUTOCAD。</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content_team">
+                <div class="content_header">
+                    <div class="title">TEAM INTRODUCTIO</div>
+                    <div class="tab">
+                        <div class="recruit" onclick="changeTab('recruit')">RECRUIT</div>
+                        <div class="team current" onclick="changeTab('team')">TEAM INTRODUCTIO</div>
+                    </div>
+                </div>
+                <div class="content_container">
+                    <div class="overflow_wrap">
+                        <div class="team_item">
+                            <div class="image">
+                                <img src="/image/team.jpg" alt="">
+                                <div class="card">
+                                    <div class="education">
+                                        <div><span>Education</span></div>
+                                        <div>M. Des ECA, U.K.</div>
+                                    </div>
+                                    <div class="experience">
+                                        <div><span>Professionalexperience</span></div>
+                                        <div>
+                                            <div>建築及視覺空間規劃設計</div>
+                                            <div>視覺與平面設計</div>
+                                            <div>傢俱與產品設計</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="name_en">Howard liao</div>
+                            <div class="name_ch"><span>廖子豪</span><span>總監</span></div>
+                        </div>
+                        <div class="team_item">
+                            <div class="image">
+                                <img src="/image/team.jpg" alt="">
+                                <div class="card">
+                                    <div class="education">
+                                        <div><span>Education</span></div>
+                                        <div>M. Des ECA, U.K.</div>
+                                    </div>
+                                    <div class="experience">
+                                        <div><span>Professionalexperience</span></div>
+                                        <div>
+                                            <div>建築及視覺空間規劃設計</div>
+                                            <div>視覺與平面設計</div>
+                                            <div>傢俱與產品設計</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="name_en">Zoe Lu</div>
+                            <div class="name_ch"><span>王小美</span><span>室內設計師</span></div>
+                        </div>
+                        <div class="team_item">
+                            <div class="image">
+                                <img src="/image/team.jpg" alt="">
+                                <div class="card">
+                                    <div class="education">
+                                        <div><span>Education</span></div>
+                                        <div>M. Des ECA, U.K.</div>
+                                    </div>
+                                    <div class="experience">
+                                        <div><span>Professionalexperience</span></div>
+                                        <div>
+                                            <div>建築及視覺空間規劃設計</div>
+                                            <div>視覺與平面設計</div>
+                                            <div>傢俱與產品設計</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="name_en">Clare Liu</div>
+                            <div class="name_ch"><span>劉雅倩</span><span>助理設計</span></div>
+                        </div>
+                        <div class="team_item">
+                            <div class="image">
+                                <img src="/image/team.jpg" alt="">
+                                <div class="card">
+                                    <div class="education">
+                                        <div><span>Education</span></div>
+                                        <div>M. Des ECA, U.K.</div>
+                                    </div>
+                                    <div class="experience">
+                                        <div><span>Professionalexperience</span></div>
+                                        <div>
+                                            <div>建築及視覺空間規劃設計</div>
+                                            <div>視覺與平面設計</div>
+                                            <div>傢俱與產品設計</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="name_en">Aplle ho</div>
+                            <div class="name_ch"><span>何蘋慧</span><span>3D室內設計師</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+<script>
+    //切換分頁
+    var changeTab = function(string){
+        if(string == 'recruit'){
+            $('.content_recruit').fadeIn(500);
+            $('.content_team').fadeOut(500);
+        }else if(string == 'team'){
+            $('.content_team').fadeIn(500);
+            $('.content_recruit').fadeOut(500);
+        }
+    }
+</script>
+</html>

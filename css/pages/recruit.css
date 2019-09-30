@@ -1,0 +1,189 @@
+/* line 4, ../../sass/pages/recruit.scss */
+#viewport .content_wrap .content_recruit, #viewport .content_wrap .content_team {
+  display: none;
+  position: absolute;
+  top: 227px;
+  width: 80%;
+  left: 10%;
+}
+/* line 11, ../../sass/pages/recruit.scss */
+#viewport .content_wrap .content_header {
+  position: relative;
+}
+/* line 13, ../../sass/pages/recruit.scss */
+#viewport .content_wrap .content_header .title {
+  display: inline-block;
+  font-weight: 300;
+  font-size: 30px;
+}
+/* line 18, ../../sass/pages/recruit.scss */
+#viewport .content_wrap .content_header .tab {
+  position: absolute;
+  top: calc(50% - 11px);
+  right: 0;
+  font-size: 0;
+}
+/* line 23, ../../sass/pages/recruit.scss */
+#viewport .content_wrap .content_header .tab .recruit, #viewport .content_wrap .content_header .tab .team {
+  font-weight: 400;
+  font-size: 14px;
+  display: inline-block;
+  color: white;
+  cursor: pointer;
+}
+/* line 29, ../../sass/pages/recruit.scss */
+#viewport .content_wrap .content_header .tab .recruit.current, #viewport .content_wrap .content_header .tab .team.current {
+  color: #000;
+}
+/* line 32, ../../sass/pages/recruit.scss */
+#viewport .content_wrap .content_header .tab .recruit:hover, #viewport .content_wrap .content_header .tab .team:hover {
+  color: #000;
+}
+/* line 36, ../../sass/pages/recruit.scss */
+#viewport .content_wrap .content_header .tab .recruit {
+  margin-right: 32px;
+  position: relative;
+}
+/* line 40, ../../sass/pages/recruit.scss */
+#viewport .content_wrap .content_header .tab .recruit::after {
+  content: "";
+  cursor: default;
+  position: absolute;
+  width: 2px;
+  height: 20px;
+  right: -16px;
+  background-color: white;
+}
+/* line 51, ../../sass/pages/recruit.scss */
+#viewport .content_wrap .content_container {
+  margin-top: 43px;
+  font-size: 0;
+  position: relative;
+}
+/* line 56, ../../sass/pages/recruit.scss */
+#viewport .content_wrap .content_container .title {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 26px;
+}
+/* line 61, ../../sass/pages/recruit.scss */
+#viewport .content_wrap .content_container .recruit_item {
+  color: #484747;
+  font-size: 18px;
+  margin-bottom: 53px;
+}
+/* line 65, ../../sass/pages/recruit.scss */
+#viewport .content_wrap .content_container .recruit_item .name {
+  font-weight: 300;
+  font-size: 18px;
+  font-weight: 600;
+  color: #414141;
+}
+/* line 71, ../../sass/pages/recruit.scss */
+#viewport .content_wrap .content_container .recruit_item div {
+  margin-bottom: 7px;
+}
+/* line 73, ../../sass/pages/recruit.scss */
+#viewport .content_wrap .content_container .recruit_item div:last-child {
+  margin-bottom: 0;
+}
+/* line 76, ../../sass/pages/recruit.scss */
+#viewport .content_wrap .content_container .recruit_item div span {
+  margin-right: 46px;
+}
+/* line 78, ../../sass/pages/recruit.scss */
+#viewport .content_wrap .content_container .recruit_item div span:last-child {
+  margin-right: 0;
+}
+/* line 84, ../../sass/pages/recruit.scss */
+#viewport .content_wrap .content_container .overflow_wrap {
+  position: absolute;
+  font-size: 0;
+}
+/* line 88, ../../sass/pages/recruit.scss */
+#viewport .content_wrap .content_container .team_item {
+  width: 23%;
+  margin: 0 1%;
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 93, ../../sass/pages/recruit.scss */
+#viewport .content_wrap .content_container .team_item .image {
+  position: relative;
+  overflow: hidden;
+}
+/* line 96, ../../sass/pages/recruit.scss */
+#viewport .content_wrap .content_container .team_item .image img {
+  width: 100%;
+}
+/* line 99, ../../sass/pages/recruit.scss */
+#viewport .content_wrap .content_container .team_item .image .card {
+  top: 100%;
+  position: absolute;
+  width: 100%;
+  transition: 1s;
+}
+/* line 104, ../../sass/pages/recruit.scss */
+#viewport .content_wrap .content_container .team_item .image .card .education {
+  text-align: center;
+  margin-bottom: 10%;
+  margin-top: 25%;
+}
+/* line 108, ../../sass/pages/recruit.scss */
+#viewport .content_wrap .content_container .team_item .image .card .education div:first-child {
+  margin-bottom: 5px;
+}
+/* line 110, ../../sass/pages/recruit.scss */
+#viewport .content_wrap .content_container .team_item .image .card .education div:first-child span {
+  font-size: 14px;
+  padding: 0 10px;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+/* line 117, ../../sass/pages/recruit.scss */
+#viewport .content_wrap .content_container .team_item .image .card .education div:last-child {
+  font-size: 12px;
+  color: #fff;
+}
+/* line 122, ../../sass/pages/recruit.scss */
+#viewport .content_wrap .content_container .team_item .image .card .experience {
+  text-align: center;
+}
+/* line 124, ../../sass/pages/recruit.scss */
+#viewport .content_wrap .content_container .team_item .image .card .experience > div:first-child {
+  margin-bottom: 5px;
+}
+/* line 126, ../../sass/pages/recruit.scss */
+#viewport .content_wrap .content_container .team_item .image .card .experience > div:first-child span {
+  font-size: 14px;
+  padding: 0 10px;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+/* line 133, ../../sass/pages/recruit.scss */
+#viewport .content_wrap .content_container .team_item .image .card .experience div:last-child {
+  font-size: 12px;
+  color: #fff;
+}
+/* line 140, ../../sass/pages/recruit.scss */
+#viewport .content_wrap .content_container .team_item .image:hover .card {
+  top: 0;
+  background-color: rgba(47, 47, 47, 0.75);
+}
+/* line 146, ../../sass/pages/recruit.scss */
+#viewport .content_wrap .content_container .team_item .name_en {
+  margin-top: 5px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+}
+/* line 152, ../../sass/pages/recruit.scss */
+#viewport .content_wrap .content_container .team_item .name_ch {
+  text-align: center;
+  color: #000;
+  font-size: 14px;
+}
+/* line 156, ../../sass/pages/recruit.scss */
+#viewport .content_wrap .content_container .team_item .name_ch span:first-child {
+  margin-right: 20px;
+}

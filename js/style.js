@@ -1,4 +1,8 @@
 $(function(){
+    var json = {
+        'profile':[{'name':'ABOUT HLD','href':'/profile.html?page=about'},{'name':'NEWS','href':'/profile.html?page=news'}],
+        'recruit':[{'name':'RECRUIT','href':'/recruit.html?page=recruit'},{'name':'TEAM INTRODUCTIO','href':'/recruit.html?page=team'}]
+    }
     //導覽列展開按鈕
     $('.bar_line').on('click',function(){
         $('.nav_wrap').show();
@@ -14,20 +18,25 @@ $(function(){
     })
     //主導覽列點擊滑出子導覽列
     $('.nav_bar .hasSubNav').on('click',function(){
-        // $('.subnav_bar').show();
+        if($(this).data('page') == 'profile'){
+            $('.subnav_title a').text('PROFILE');
+            for(var i = 0 ; i < json.profile.length ; i++){
+                var string = '<li><a href="'+ json.profile[i].href +'">'+ json.profile[i].name +'</a></li>';
+                $('.subnav_bar ul').append(string);
+            }
+        }else if($(this).data('page') == 'recruit'){
+            $('.subnav_title a').text('RECRUIT');
+            for(var i = 0 ; i < json.recruit.length ; i++){
+                var string = '<li><a href="'+ json.recruit[i].href +'">'+ json.recruit[i].name +'</a></li>';
+                $('.subnav_bar ul').append(string);
+            }
+        }
         $('.nav_bar').animate({'right':$('.nav_wrap').width()},500);
         $('.subnav_bar').animate({'right':0},500);
-        // setTimeout(function() {
-        //     $('.nav_bar').hide();
-        // }, 500);
     })
     //子導覽列點擊回主導覽列
-    $('.subnav_bar .subna_title').on('click',function(){
-        // $('.nav_bar').show();
+    $('.subnav_bar .subnav_title').on('click',function(){
         $('.nav_bar').animate({'right':0},500);
         $('.subnav_bar').animate({'right':'-'+$('.nav_wrap').width()},500);
-        // setTimeout(function() {
-        //     $('.subnav_bar').hide();
-        // }, 500);
     })
 })
