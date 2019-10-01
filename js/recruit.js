@@ -11,7 +11,9 @@ $(function(){
                 $('.content_recruit').fadeIn(500);
             }else if(ParaVal[1] == 'team'){
                 $('.content_team').fadeIn(500);
-                changeCardHeight();
+                setTimeout(function(){
+                    changeCardHeight();
+                },100)
             }else{
                 $('.content_recruit').fadeIn(500);
             }
@@ -22,7 +24,10 @@ $(function(){
         $('.content_recruit').fadeIn(500);
     }
     
-    changeCardHeight();
+    setTimeout(function(){
+        changeCardHeight();
+    },100)
+    
 
     function changeCardHeight(){
         $('.card').each(function(){

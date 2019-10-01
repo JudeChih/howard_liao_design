@@ -16,6 +16,7 @@ body,html{
         height: 100%;
         &.page_contact{
             background-image: url('/image/pic_03.jpg');
+            background-position: center;
         }
         &.page_profile,&.page_recruit,&.page_work{
             background-color: #e1e1e1;

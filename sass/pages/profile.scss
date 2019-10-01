@@ -4,9 +4,9 @@
         .content_about,.content_news{
             display: none;
             position: absolute;
-            top:227px;
-            width:80%;
-            left: 10%;
+            top:15%;
+            width:90%;
+            left: 5%;
         }
         .content_header{
             position: relative;
@@ -49,18 +49,22 @@
             }
         }
         .content_container{
-            margin-top: 43px;
+            margin-top: 5%;
             font-size: 0;
             .container_left{
-                width:50%;
+                width:calc(50% - 20px);
                 display: inline-block;
                 vertical-align: top;
+                overflow-y: auto;
+                margin-right: 20px;
                 span{
                     display: block;
-                    padding-right: 20px;
                     font-weight: 300;
                     font-size: 18px;
-                    margin-bottom: 36px
+                    margin-bottom: 36px;
+                    &:first-child{
+                        margin-top:10px;
+                    }
                 }
             }
             .container_right{

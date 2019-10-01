@@ -39,13 +39,14 @@
                 </ul>
             </div>
         </div>
+        <a id="logo" href="/index.html"></a>
+        <div id="link">
+            <a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a>
+            <a href="javascript:void(0)"><i class="fab fa-instagram"></i></a>
+            <a href="javascript:void(0)"><i class="fab fa-youtube"></i></a>
+        </div>
         <div class="content_wrap">
-            <a id="logo" href="/index.html"></a>
-            <div id="link">
-                <a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a>
-                <a href="javascript:void(0)"><i class="fab fa-instagram"></i></a>
-                <a href="javascript:void(0)"><i class="fab fa-youtube"></i></a>
-            </div>
+        
             <div class="content_recruit">
                 <div class="content_header">
                     <div class="title">RECRUIT</div>
@@ -194,6 +195,9 @@
         }else if(string == 'team'){
             $('.content_team').fadeIn(500);
             $('.content_recruit').fadeOut(500);
+            $('.card').each(function(){
+                $(this).css({'height':$('.image img').height()});
+            })
         }
     }
 </script>

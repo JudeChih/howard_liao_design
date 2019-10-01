@@ -2,9 +2,9 @@
 #viewport .content_wrap .content_recruit, #viewport .content_wrap .content_team {
   display: none;
   position: absolute;
-  top: 227px;
-  width: 80%;
-  left: 10%;
+  top: 11.8%;
+  width: 90%;
+  left: 5%;
 }
 /* line 11, ../../sass/pages/recruit.scss */
 #viewport .content_wrap .content_header {
@@ -70,7 +70,7 @@
 #viewport .content_wrap .content_container .recruit_item {
   color: #484747;
   font-size: 18px;
-  margin-bottom: 53px;
+  margin-bottom: 3%;
 }
 /* line 65, ../../sass/pages/recruit.scss */
 #viewport .content_wrap .content_container .recruit_item .name {
@@ -89,7 +89,7 @@
 }
 /* line 76, ../../sass/pages/recruit.scss */
 #viewport .content_wrap .content_container .recruit_item div span {
-  margin-right: 46px;
+  margin-right: 2.3%;
 }
 /* line 78, ../../sass/pages/recruit.scss */
 #viewport .content_wrap .content_container .recruit_item div span:last-child {

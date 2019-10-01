@@ -2,9 +2,9 @@
 #viewport .content_wrap .content_about, #viewport .content_wrap .content_news {
   display: none;
   position: absolute;
-  top: 227px;
-  width: 80%;
-  left: 10%;
+  top: 15%;
+  width: 90%;
+  left: 5%;
 }
 /* line 11, ../../sass/pages/profile.scss */
 #viewport .content_wrap .content_header {
@@ -56,34 +56,39 @@
 }
 /* line 51, ../../sass/pages/profile.scss */
 #viewport .content_wrap .content_container {
-  margin-top: 43px;
+  margin-top: 5%;
   font-size: 0;
 }
 /* line 54, ../../sass/pages/profile.scss */
 #viewport .content_wrap .content_container .container_left {
-  width: 50%;
+  width: calc(50% - 20px);
   display: inline-block;
   vertical-align: top;
+  overflow-y: auto;
+  margin-right: 20px;
 }
-/* line 58, ../../sass/pages/profile.scss */
+/* line 60, ../../sass/pages/profile.scss */
 #viewport .content_wrap .content_container .container_left span {
   display: block;
-  padding-right: 20px;
   font-weight: 300;
   font-size: 18px;
   margin-bottom: 36px;
 }
-/* line 66, ../../sass/pages/profile.scss */
+/* line 65, ../../sass/pages/profile.scss */
+#viewport .content_wrap .content_container .container_left span:first-child {
+  margin-top: 10px;
+}
+/* line 70, ../../sass/pages/profile.scss */
 #viewport .content_wrap .content_container .container_right {
   width: 50%;
   display: inline-block;
   vertical-align: top;
 }
-/* line 70, ../../sass/pages/profile.scss */
+/* line 74, ../../sass/pages/profile.scss */
 #viewport .content_wrap .content_container .container_right img {
   width: 100%;
 }
-/* line 74, ../../sass/pages/profile.scss */
+/* line 78, ../../sass/pages/profile.scss */
 #viewport .content_wrap .content_container .news_item {
   width: 32%;
   margin-right: 2%;
@@ -91,34 +96,34 @@
   vertical-align: top;
   font-size: 0;
 }
-/* line 80, ../../sass/pages/profile.scss */
+/* line 84, ../../sass/pages/profile.scss */
 #viewport .content_wrap .content_container .news_item:nth-child(3n) {
   margin-right: 0;
 }
-/* line 83, ../../sass/pages/profile.scss */
+/* line 87, ../../sass/pages/profile.scss */
 #viewport .content_wrap .content_container .news_item .news_image {
   transition: .5s;
   cursor: pointer;
 }
-/* line 86, ../../sass/pages/profile.scss */
+/* line 90, ../../sass/pages/profile.scss */
 #viewport .content_wrap .content_container .news_item .news_image img {
   width: 100%;
 }
-/* line 89, ../../sass/pages/profile.scss */
+/* line 93, ../../sass/pages/profile.scss */
 #viewport .content_wrap .content_container .news_item .news_image:hover {
   box-shadow: 4px 4px 8px 0px rgba(177, 158, 146, 0.36);
 }
-/* line 93, ../../sass/pages/profile.scss */
+/* line 97, ../../sass/pages/profile.scss */
 #viewport .content_wrap .content_container .news_item .news_title {
   margin-top: 19px;
 }
-/* line 95, ../../sass/pages/profile.scss */
+/* line 99, ../../sass/pages/profile.scss */
 #viewport .content_wrap .content_container .news_item .news_title .date, #viewport .content_wrap .content_container .news_item .news_title .word {
   font-weight: 300;
   font-size: 18px;
   color: white;
 }
-/* line 103, ../../sass/pages/profile.scss */
+/* line 107, ../../sass/pages/profile.scss */
 #viewport .content_wrap .overlay {
   display: none;
   z-index: 99;
@@ -129,7 +134,7 @@
   top: 0;
   left: 0;
 }
-/* line 112, ../../sass/pages/profile.scss */
+/* line 116, ../../sass/pages/profile.scss */
 #viewport .content_wrap .overlay .news_detail_wrap {
   max-width: 690px;
   padding: 2.5% 2.4% 2%;
@@ -143,7 +148,7 @@
   right: 0;
   margin: auto;
 }
-/* line 124, ../../sass/pages/profile.scss */
+/* line 128, ../../sass/pages/profile.scss */
 #viewport .content_wrap .overlay .news_detail_wrap .close {
   cursor: pointer;
   font-size: 20px;
@@ -152,17 +157,17 @@
   right: 8px;
   top: 2px;
 }
-/* line 133, ../../sass/pages/profile.scss */
+/* line 137, ../../sass/pages/profile.scss */
 #viewport .content_wrap .overlay .news_detail_wrap .news_detail_image img {
   width: 100%;
 }
-/* line 138, ../../sass/pages/profile.scss */
+/* line 142, ../../sass/pages/profile.scss */
 #viewport .content_wrap .overlay .news_detail_wrap .news_detail_title .date, #viewport .content_wrap .overlay .news_detail_wrap .news_detail_title .word {
   font-weight: 300;
   font-size: 18px;
   color: #8d8d8d;
 }
-/* line 143, ../../sass/pages/profile.scss */
+/* line 147, ../../sass/pages/profile.scss */
 #viewport .content_wrap .overlay .news_detail_wrap .news_detail_title .content {
   font-weight: 300;
   font-size: 15px;

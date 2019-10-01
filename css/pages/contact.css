@@ -1,10 +1,10 @@
 /* line 3, ../../sass/pages/contact.scss */
 #viewport .content_bg {
   position: absolute;
-  top: 149px;
+  top: 13.7%;
   z-index: 1;
   width: 100%;
-  height: 696px;
+  height: 64.4%;
   font-size: 0;
 }
 /* line 10, ../../sass/pages/contact.scss */
@@ -26,29 +26,30 @@
   position: relative;
   z-index: 5;
   font-size: 0;
+  padding-top: 7.7%;
 }
-/* line 27, ../../sass/pages/contact.scss */
+/* line 28, ../../sass/pages/contact.scss */
 #viewport .content_wrap .content_left {
   color: #696969;
-  width: 50%;
+  width: 45%;
+  margin-left: 5%;
   display: inline-block;
   vertical-align: top;
-  padding-top: 149px;
 }
-/* line 33, ../../sass/pages/contact.scss */
+/* line 34, ../../sass/pages/contact.scss */
 #viewport .content_wrap .content_left .contact_title {
   font-weight: 300;
   font-size: 30px;
   letter-spacing: 1px;
-  margin-top: 110px;
+  margin-top: 10.7%;
 }
-/* line 39, ../../sass/pages/contact.scss */
+/* line 40, ../../sass/pages/contact.scss */
 #viewport .content_wrap .content_left .contact_name {
   font-weight: 300;
   font-size: 18px;
   margin-top: 19px;
 }
-/* line 44, ../../sass/pages/contact.scss */
+/* line 45, ../../sass/pages/contact.scss */
 #viewport .content_wrap .content_left .contact_item {
   display: block;
   font-weight: 300;
@@ -57,27 +58,26 @@
   margin-top: 20px;
   padding-left: 31px;
 }
-/* line 51, ../../sass/pages/contact.scss */
+/* line 52, ../../sass/pages/contact.scss */
 #viewport .content_wrap .content_left .contact_item:first-child {
   margin-top: 54px;
 }
-/* line 54, ../../sass/pages/contact.scss */
+/* line 55, ../../sass/pages/contact.scss */
 #viewport .content_wrap .content_left .contact_item i {
   position: absolute;
   top: calc(50% - 9.2px);
   left: 0;
 }
-/* line 61, ../../sass/pages/contact.scss */
+/* line 62, ../../sass/pages/contact.scss */
 #viewport .content_wrap .content_right {
-  width: 50%;
+  width: 45%;
   display: inline-block;
   vertical-align: top;
-  padding-top: 149px;
 }
 /* line 66, ../../sass/pages/contact.scss */
 #viewport .content_wrap .content_right form {
   text-align: center;
-  padding: 103px 13% 0;
+  padding: 10% 13% 0;
 }
 /* line 69, ../../sass/pages/contact.scss */
 #viewport .content_wrap .content_right form input {

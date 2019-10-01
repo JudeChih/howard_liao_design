@@ -1,4 +1,8 @@
 $(function(){
+    setTimeout(function(){
+        $('.container_left').css({'height':$('.container_right').height()});
+    },100)
+
     //判斷是要去哪個分頁
     var strUrl = location.search;
     
@@ -22,7 +26,11 @@ $(function(){
         $('.content_about').fadeIn(500);
     }
     
-
+    
+    //調整文字框的高度
+    $(window).resize(function(){
+        $('.container_left').css({'height':$('.container_right').height()});
+    })
     //點擊news圖片會談出細節頁視窗
     $('.news_item').on('click',function(){
         $('.overlay').fadeIn(500);
