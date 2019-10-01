@@ -6,15 +6,15 @@
 /* line 8, ../sass/layout.scss */
 body, html {
   font-family: 'Hind','Microsoft JhengHei', sans-serif;
-  min-height: 1080px;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   margin: 0;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 /* line 14, ../sass/layout.scss */
 body #viewport, html #viewport {
   width: 100%;
-  min-height: 1080px;
+  height: 100%;
 }
 /* line 17, ../sass/layout.scss */
 body #viewport.page_contact, html #viewport.page_contact {
@@ -169,8 +169,8 @@ body #viewport .bar_line, html #viewport .bar_line {
   cursor: pointer;
   z-index: 10;
   position: absolute;
-  top: 79px;
-  right: 70px;
+  top: 4%;
+  right: 4%;
   width: 30px;
 }
 /* line 154, ../sass/layout.scss */
@@ -186,32 +186,28 @@ body #viewport .bar_line span:last-child, html #viewport .bar_line span:last-chi
   margin-bottom: 0;
 }
 /* line 165, ../sass/layout.scss */
-body #viewport .content_wrap, html #viewport .content_wrap {
-  max-width: 1024px;
-  min-height: 1080px;
-  margin: auto;
-  position: relative;
-}
-/* line 170, ../sass/layout.scss */
-body #viewport .content_wrap #logo, html #viewport .content_wrap #logo {
+body #viewport #logo, html #viewport #logo {
   width: 192px;
   height: 38px;
   position: absolute;
   background-image: url("/image/logo.png");
   background-size: 100%;
-  left: 15px;
-  top: 75px;
+  left: 7.4%;
+  top: 3.9%;
+  z-index: 5;
 }
-/* line 179, ../sass/layout.scss */
-body #viewport .content_wrap #link, html #viewport .content_wrap #link {
-  left: 15px;
+/* line 175, ../sass/layout.scss */
+body #viewport #link, html #viewport #link {
+  left: 7.4%;
   position: absolute;
-  bottom: 75px;
+  bottom: 3.8%;
   font-size: 0;
+  z-index: 5;
 }
-/* line 184, ../sass/layout.scss */
-body #viewport .content_wrap #link a, html #viewport .content_wrap #link a {
-  font-size: 15px;
+/* line 181, ../sass/layout.scss */
+body #viewport #link a, html #viewport #link a {
+  vertical-align: top;
+  font-size: 16px;
   display: inline-block;
   line-height: 30px;
   text-align: center;
@@ -221,4 +217,15 @@ body #viewport .content_wrap #link a, html #viewport .content_wrap #link a {
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.5);
   margin-right: 4px;
+}
+/* line 193, ../sass/layout.scss */
+body #viewport #link a i, html #viewport #link a i {
+  vertical-align: middle;
+}
+/* line 198, ../sass/layout.scss */
+body #viewport .content_wrap, html #viewport .content_wrap {
+  max-width: 1024px;
+  height: 100%;
+  margin: auto;
+  position: relative;
 }
