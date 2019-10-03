@@ -29,12 +29,14 @@ $(function(){
         var num = 0;
         $('.slider_item').eq(num).show();
         setInterval(function(){
+            $('.slider_item').eq(num).css({'z-index':2});
             $('.slider_item').eq(num).fadeOut(1000);
             num++;
             if(num >= $('.slider_item').length){
                 num = 0;
             }
-            $('.slider_item').eq(num).fadeIn(1000);
+            $('.slider_item').eq(num).css({'z-index':1});
+            $('.slider_item').eq(num).fadeIn(500);
         },12000);
 
         var word = 0;

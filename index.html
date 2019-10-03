@@ -5,36 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/all.min.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/pages/index.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/pages/index.css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="js/cycle2.min.js"></script>
-    <script src="js/style.js"></script>
-    <script src="js/index.js"></script>
+    <script src="../js/cycle2.min.js"></script>
+    <script src="../js/style.js"></script>
+    <script src="../js/index.js"></script>
 </head>
 <body>
     <div id="first_page">
         <div>
-            <img src="image/logo.png" alt="">
+            <img src="../image/logo.png" alt="">
         </div>
     </div>
     <div id="viewport">
         <div class="index_slider">
             <div class="slider_item">
-                <div class="slider_img" data-url="image/pic_01.jpg"></div>
+                <div class="slider_img" data-url="../image/pic_01.jpg" data-mobile="../image/pic_01_m.jpg"></div>
             </div>
             <div class="slider_item">
-                <div class="slider_img" data-url="image/pic_02.jpg"></div>
+                <div class="slider_img" data-url="../image/pic_02.jpg" data-mobile="../image/pic_02_m.jpg"></div>
             </div>
             <div class="slider_item">
-                <div class="slider_img" data-url="image/pic_03.jpg"></div>
+                <div class="slider_img" data-url="../image/pic_03.jpg" data-mobile="../image/pic_03_m.jpg"></div>
             </div>
             <div class="slider_item">
-                <div class="slider_img" data-url="image/pic_04.jpg"></div>
+                <div class="slider_img" data-url="../image/pic_04.jpg" data-mobile="../image/pic_04_m.jpg"></div>
             </div>
             <div class="slider_item">
-                <div class="slider_img" data-url="image/pic_05.jpg"></div>
+                <div class="slider_img" data-url="../image/pic_05.jpg" data-mobile="../image/pic_05_m.jpg"></div>
             </div>
             <div class="word_slider">
                 <div class="word_item ws01">
@@ -62,11 +62,16 @@
             <div class="nav_bar">
                 <ul>
                     <li class="hasSubNav" data-page='profile'><a href="javascript:void(0)">PROFILE</a></li>
-                    <li><a href="/work.html">WORKS</a></li>
-                    <li><a href="/contact.html">CONTACT US</a></li>
+                    <li><a href="../work.html">WORKS</a></li>
+                    <li><a href="../contact.html">CONTACT US</a></li>
                     <li class="hasSubNav" data-page='recruit'><a href="javascript:void(0)">RECRUIT</a></li>
                 </ul>
                 <span class="copyright">© 2019 HOWARD LIAO DESIGN</span>
+                <div id="nav_link">
+                    <a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a>
+                    <a href="javascript:void(0)"><i class="fab fa-instagram"></i></a>
+                    <a href="javascript:void(0)"><i class="fab fa-youtube"></i></a>
+                </div>
             </div>
             <div class="subnav_bar">
                 <ul>
@@ -74,7 +79,7 @@
                 </ul>
             </div>
         </div>
-        <a id="logo" href="/index.html"></a>
+        <a id="logo" href="../index.html"></a>
         <div id="link">
             <a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a>
             <a href="javascript:void(0)"><i class="fab fa-instagram"></i></a>
@@ -101,14 +106,29 @@
         }
     }, 3000);
     //設定所有幻燈片圖片路徑
-    $('#viewport .slider_img').each(function(){
-        $(this).css({'background-image':'url('+$(this).data('url')+')'});
-    })
+    if($(window).width() < 480){
+        $('#viewport .slider_img').each(function(){
+            $(this).css({'background-image':'url('+$(this).data('mobile')+')'});
+        })
+    }else{
+        $('#viewport .slider_img').each(function(){
+            $(this).css({'background-image':'url('+$(this).data('url')+')'});
+        })
+    }
     
     
     //監聽滿版幻燈片圖片的寬度
     $(window).resize(function(){
         $('#viewport .slider_img').css({'width':$(window).width()});
+        if($(window).width() < 480){
+            $('#viewport .slider_img').each(function(){
+                $(this).css({'background-image':'url('+$(this).data('mobile')+')'});
+            })
+        }else{
+            $('#viewport .slider_img').each(function(){
+                $(this).css({'background-image':'url('+$(this).data('url')+')'});
+            })
+        }
     })
 
     //首頁幻燈片效果

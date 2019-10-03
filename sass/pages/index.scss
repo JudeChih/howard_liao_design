@@ -43,7 +43,7 @@
         width: 100vw;
         height:100vh;
         position: absolute;
-        z-index: -1;
+        z-index: 0;
         .slider_item{
             width: 100vw;
             height:100vh;
@@ -60,10 +60,8 @@
         }
         // 文字幻燈片
         .word_slider{
-            width: 591px;
-            position: absolute;
-            top: 26%;
-            right: 10%;
+            
+            
             .word_item{
                 display: none;
                 span{
@@ -86,12 +84,41 @@
             }
             .ws01{
                 position: absolute;
+                z-index: 1;
+                @media screen and (min-width: 768px) {
+                    width: 591px;
+                    top: 26%;
+                    right: 10%;
+                }
+                @media screen and (min-width: 480px) and (max-width:767px) {
+                    width: 90%;
+                    top: 26%;
+                    right: 5%;
+                }
+                @media screen and (max-width:479px) {
+                    width: 90%;
+                    top: 26%;
+                    right: 5%;
+                }
             }
             .ws02{
                 position: absolute;
-                top: 64px;
-                right: 19%;
-                width: 591px;
+                z-index: 1;
+                @media screen and (min-width: 768px) {
+                    width: 591px;
+                    top: 30%;
+                    right: 19%;
+                }
+                @media screen and (min-width: 480px) and (max-width:767px) {
+                    width: 90%;
+                    right: 5%;
+                    top: 30%;
+                }
+                @media screen and (max-width:479px) {
+                    width: 90%;
+                    right: 5%;
+                    top: 30%;
+                }
                 .word_title{
                     opacity: 0.67;
                 }

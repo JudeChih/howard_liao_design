@@ -1,7 +1,10 @@
 $(function(){
-    setTimeout(function(){
-        $('.container_left').css({'height':$('.container_right').height()});
-    },100)
+    if($(window).width() >= 480){
+        setTimeout(function(){
+            $('.container_left').css({'height':$('.container_right').height()});
+        },100)
+    }
+    
 
     //判斷是要去哪個分頁
     var strUrl = location.search;
@@ -29,7 +32,11 @@ $(function(){
     
     //調整文字框的高度
     $(window).resize(function(){
-        $('.container_left').css({'height':$('.container_right').height()});
+        if($(window).width() >= 480){
+            $('.container_left').css({'height':$('.container_right').height()});
+        }else{
+            $('.container_left').css({'height':'auto'});
+        }
     })
     //點擊news圖片會談出細節頁視窗
     $('.news_item').on('click',function(){

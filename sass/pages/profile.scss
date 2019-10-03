@@ -4,9 +4,21 @@
         .content_about,.content_news{
             display: none;
             position: absolute;
-            top:15%;
-            width:90%;
-            left: 5%;
+            @media screen and (min-width: 768px) {
+                width:80%;
+                left: 10%;
+                top:15%;   
+            }
+            @media screen and (min-width: 480px) and (max-width:767px) {
+                width:90%;
+                left: 5%;
+                top:15%;    
+            }
+            @media screen and (max-width:479px) {
+                width:90%;
+                left: 5%;
+                top:15%;    
+            }
         }
         .content_header{
             position: relative;
@@ -20,6 +32,9 @@
                 top: calc(50% - 11px);
                 right: 0;
                 font-size: 0;
+                @media screen and (max-width:479px) {
+                    top: 100%;
+                }
                 .about,.news{
                     font-weight: 400;
                     font-size: 14px;
@@ -51,12 +66,19 @@
         .content_container{
             margin-top: 5%;
             font-size: 0;
+            @media screen and (max-width:479px) {
+                margin-top: 10%;
+            }
             .container_left{
                 width:calc(50% - 20px);
                 display: inline-block;
                 vertical-align: top;
                 overflow-y: auto;
                 margin-right: 20px;
+                @media screen and (max-width:479px) {
+                    width: 100%;
+                    overflow-y: unset;
+                }
                 span{
                     display: block;
                     font-weight: 300;
@@ -74,16 +96,39 @@
                 img{
                     width:100%;
                 }
+                @media screen and (max-width:479px) {
+                    width: 100%;
+                    margin-bottom: 10%;
+                }
             }
             .news_item{
                 width:32%;
-                margin-right:2%;
+                
                 display: inline-block;
                 vertical-align: top;
                 font-size: 0;
-                &:nth-child(3n){
-                    margin-right: 0;
+                @media screen and (min-width: 768px) {
+                    width:32%;
+                    margin-right:2%;
+                    &:nth-child(3n){
+                        margin-right: 0;
+                    }
                 }
+                @media screen and (min-width: 480px) and (max-width:767px) {
+                    width:32%;
+                    margin-right:2%;
+                    &:nth-child(3n){
+                        margin-right: 0;
+                    } 
+                }
+                @media screen and (max-width:479px) {
+                    width:90%;   
+                    margin:0 5% 10%;
+                    &:first-child{
+                        margin-top: 10px;
+                    }
+                }
+                
                 .news_image{
                     transition: .5s;
                     cursor: pointer;
@@ -125,6 +170,13 @@
                 left: 0;
                 right: 0;
                 margin: auto;
+                @media screen and (min-width: 480px) and (max-width:767px) {
+                    width: 80%;
+                }
+                @media screen and (max-width:479px) {
+                    width: 90%;
+                    padding: 5% 5% 4%;
+                }
                 .close{
                     cursor: pointer;
                     font-size: 20px;

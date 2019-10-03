@@ -78,25 +78,58 @@
             }
         }
         .content_work_detail{
-            margin-top: 12%;
+            
             display: inline-block;
             font-size: 0;
             position: relative;
+            @media screen and (min-width: 768px) {
+                margin-top: 12%;
+            }
+            @media screen and (min-width: 480px) and (max-width:767px) {
+                margin-top: 18%;
+            }
+            
+            @media screen and (max-width:479px) {
+                margin-top: 25%;
+            }
             .content_left{
-                margin-left:11.77%;
                 vertical-align: bottom;
                 display: inline-block;
-                width: 46.87%;
+                @media screen and (min-width: 768px) {
+                    width: 46.87%;
+                    margin-left:11.77%;
+                }
+                @media screen and (min-width: 480px) and (max-width:767px) {
+                    width: 80%;
+                    margin-left:10%;
+                }
+                
+                @media screen and (max-width:479px) {
+                    width: 90%;
+                    margin-left:5%;    
+                }
                 img{
                     width:100%;
                 }
             }
             .content_right{
-                width:33%;
-                margin-left: 2.8%;
                 vertical-align: bottom;
                 display: inline-block;
                 position: relative;
+                @media screen and (min-width: 768px) { 
+                    width:33%;
+                    margin-left: 2.8%;
+                }
+                @media screen and (min-width: 480px) and (max-width:767px) {
+                    width: 80%;
+                    margin-left:10%;
+                    margin-top:5%;
+                }
+                
+                @media screen and (max-width:479px) {
+                    width: 90%;
+                    margin-left:5%;    
+                }
                 .title{
                     font-size: 24px;
                     margin-bottom:1%;
