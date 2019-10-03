@@ -43,30 +43,26 @@
             }
             .work_wrap{
                 font-size: 0;
+                margin: 0 12.8%;
                 .work_item{
                     cursor: pointer;
-                    @media screen and (min-width: 1024px) {
-                        width:32%;
-                        margin-right:2%;
-                        margin-bottom:2%;
-                        &:nth-child(3n){
-                            margin-right: 0;
-                        }
-                    }
-
-                    @media screen and (min-width: 768px) and (max-width:1023px) {
-                        width:94%/3;
+                    @media screen and (min-width: 768px) {
+                        width:calc(94%/3);
                         margin:1%;
+
                     }
-                    
                     @media screen and (min-width: 480px) and (max-width:767px) {
-                        width:32%;
+                        width:46%;
                         margin-right:2%;
-                        margin-bottom:2%;
+                        margin: 0 2% 2%;
                     }
                     
                     @media screen and (max-width:479px) {
-                        
+                        width: 96%;
+                        margin: 2%;
+                        &:last-child{
+                            margin-bottom: 15%;
+                        }
                     }
                     transition: 0.5s;
                     display: inline-block;
@@ -81,5 +77,66 @@
                 }
             }
         }
+        .content_work_detail{
+            margin-top: 12%;
+            display: inline-block;
+            font-size: 0;
+            position: relative;
+            .content_left{
+                margin-left:11.77%;
+                vertical-align: bottom;
+                display: inline-block;
+                width: 46.87%;
+                img{
+                    width:100%;
+                }
+            }
+            .content_right{
+                width:33%;
+                margin-left: 2.8%;
+                vertical-align: bottom;
+                display: inline-block;
+                position: relative;
+                .title{
+                    font-size: 24px;
+                    margin-bottom:1%;
+                }
+                .intro{
+                    font-size: 18px;
+                    margin-bottom: 2.3%;
+                    width:50%;
+                }
+                .content{
+                    font-size: 18px;
+                }
+                @media screen and (min-width: 768px) {
+                    .title{
+                        font-size: 20px;
+                        margin-bottom:1%;
+                    }
+                    .intro,.content{
+                        font-size: 14px;
+                    }
+                }
+                @media screen and (min-width: 480px) and (max-width:767px) {
+                    
+                }
+                
+                @media screen and (max-width:479px) {
+                    
+                }
+                .back{
+                    width:image-width('image/back.png');
+                    height:image-height('image/back.png');
+                    background-image: url('/image/back.png');
+                    position: absolute;
+                    right: -4%;
+                    bottom:0;
+                    cursor: pointer;
+                }
+            }
+            
+        }
+        
     }
 }

@@ -9,34 +9,49 @@ body, html {
   height: 100vh;
   width: 100vw;
   margin: 0;
+  background-color: #e1e1e1;
   overflow: hidden;
 }
-/* line 14, ../sass/layout.scss */
+@media screen and (max-width: 479px) {
+  /* line 8, ../sass/layout.scss */
+  body, html {
+    overflow: unset;
+  }
+}
+/* line 18, ../sass/layout.scss */
 body #viewport, html #viewport {
   width: 100%;
   height: 100%;
 }
-/* line 17, ../sass/layout.scss */
+/* line 21, ../sass/layout.scss */
 body #viewport.page_contact, html #viewport.page_contact {
   background-image: url("/image/pic_03.jpg");
   background-position: center;
 }
-/* line 21, ../sass/layout.scss */
+/* line 25, ../sass/layout.scss */
 body #viewport.page_profile, body #viewport.page_recruit, body #viewport.page_work, html #viewport.page_profile, html #viewport.page_recruit, html #viewport.page_work {
   background-color: #e1e1e1;
 }
-/* line 24, ../sass/layout.scss */
+/* line 28, ../sass/layout.scss */
 body #viewport .nav_wrap, html #viewport .nav_wrap {
   display: none;
   position: absolute;
   z-index: 10;
   right: -357px;
   width: 357px;
-  min-height: 1080px;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   overflow: hidden;
 }
-/* line 33, ../sass/layout.scss */
+@media screen and (max-width: 479px) {
+  /* line 28, ../sass/layout.scss */
+  body #viewport .nav_wrap, html #viewport .nav_wrap {
+    right: -100%;
+    width: 100%;
+    position: fixed;
+  }
+}
+/* line 42, ../sass/layout.scss */
 body #viewport .nav_wrap .close, html #viewport .nav_wrap .close {
   font-weight: 400;
   letter-spacing: 1px;
@@ -48,28 +63,28 @@ body #viewport .nav_wrap .close, html #viewport .nav_wrap .close {
   top: 47px;
   cursor: pointer;
 }
-/* line 43, ../sass/layout.scss */
+/* line 52, ../sass/layout.scss */
 body #viewport .nav_wrap .close i, html #viewport .nav_wrap .close i {
   font-size: 22px;
 }
-/* line 46, ../sass/layout.scss */
+/* line 55, ../sass/layout.scss */
 body #viewport .nav_wrap .close span, html #viewport .nav_wrap .close span {
   font-size: 12px;
   display: block;
 }
-/* line 51, ../sass/layout.scss */
+/* line 60, ../sass/layout.scss */
 body #viewport .nav_wrap .nav_bar, html #viewport .nav_wrap .nav_bar {
   position: absolute;
   padding-top: 126px;
   width: 100%;
   right: 0;
 }
-/* line 56, ../sass/layout.scss */
+/* line 65, ../sass/layout.scss */
 body #viewport .nav_wrap .nav_bar ul, html #viewport .nav_wrap .nav_bar ul {
   padding: 0 27px 0 50px;
   width: calc(100% - 77px);
 }
-/* line 59, ../sass/layout.scss */
+/* line 68, ../sass/layout.scss */
 body #viewport .nav_wrap .nav_bar ul li, html #viewport .nav_wrap .nav_bar ul li {
   position: relative;
   width: 100%;
@@ -80,7 +95,7 @@ body #viewport .nav_wrap .nav_bar ul li, html #viewport .nav_wrap .nav_bar ul li
   border-bottom: 1px solid white;
   letter-spacing: 1px;
 }
-/* line 68, ../sass/layout.scss */
+/* line 77, ../sass/layout.scss */
 body #viewport .nav_wrap .nav_bar ul li:before, html #viewport .nav_wrap .nav_bar ul li:before {
   display: inline-block;
   content: "";
@@ -95,13 +110,13 @@ body #viewport .nav_wrap .nav_bar ul li:before, html #viewport .nav_wrap .nav_ba
   right: 18px;
   margin-top: -4px;
 }
-/* line 82, ../sass/layout.scss */
+/* line 91, ../sass/layout.scss */
 body #viewport .nav_wrap .nav_bar ul li a, html #viewport .nav_wrap .nav_bar ul li a {
   display: block;
   color: white;
   text-decoration: none;
 }
-/* line 89, ../sass/layout.scss */
+/* line 98, ../sass/layout.scss */
 body #viewport .nav_wrap .nav_bar .copyright, html #viewport .nav_wrap .nav_bar .copyright {
   font-weight: 300;
   font-size: 15px;
@@ -112,19 +127,19 @@ body #viewport .nav_wrap .nav_bar .copyright, html #viewport .nav_wrap .nav_bar 
   margin-top: 40px;
   letter-spacing: 1px;
 }
-/* line 100, ../sass/layout.scss */
+/* line 109, ../sass/layout.scss */
 body #viewport .nav_wrap .subnav_bar, html #viewport .nav_wrap .subnav_bar {
   position: absolute;
   padding-top: 126px;
   width: 100%;
   right: -357px;
 }
-/* line 105, ../sass/layout.scss */
+/* line 114, ../sass/layout.scss */
 body #viewport .nav_wrap .subnav_bar ul, html #viewport .nav_wrap .subnav_bar ul {
   padding: 0 27px 0 50px;
   width: calc(100% - 77px);
 }
-/* line 108, ../sass/layout.scss */
+/* line 117, ../sass/layout.scss */
 body #viewport .nav_wrap .subnav_bar ul li, html #viewport .nav_wrap .subnav_bar ul li {
   position: relative;
   width: 100%;
@@ -136,11 +151,11 @@ body #viewport .nav_wrap .subnav_bar ul li, html #viewport .nav_wrap .subnav_bar
   color: white;
   letter-spacing: 1px;
 }
-/* line 118, ../sass/layout.scss */
+/* line 127, ../sass/layout.scss */
 body #viewport .nav_wrap .subnav_bar ul li.subnav_title, html #viewport .nav_wrap .subnav_bar ul li.subnav_title {
   text-align: right;
 }
-/* line 121, ../sass/layout.scss */
+/* line 130, ../sass/layout.scss */
 body #viewport .nav_wrap .subnav_bar ul li.subnav_title:before, html #viewport .nav_wrap .subnav_bar ul li.subnav_title:before {
   display: inline-block;
   content: "";
@@ -155,17 +170,48 @@ body #viewport .nav_wrap .subnav_bar ul li.subnav_title:before, html #viewport .
   left: 10px;
   margin-top: -4px;
 }
-/* line 135, ../sass/layout.scss */
+/* line 144, ../sass/layout.scss */
 body #viewport .nav_wrap .subnav_bar ul li.subnav_title a, html #viewport .nav_wrap .subnav_bar ul li.subnav_title a {
   padding-right: 10px;
 }
-/* line 139, ../sass/layout.scss */
+/* line 148, ../sass/layout.scss */
 body #viewport .nav_wrap .subnav_bar ul li a, html #viewport .nav_wrap .subnav_bar ul li a {
   display: block;
   color: white;
   text-decoration: none;
 }
-/* line 148, ../sass/layout.scss */
+/* line 156, ../sass/layout.scss */
+body #viewport .nav_wrap #nav_link, html #viewport .nav_wrap #nav_link {
+  display: none;
+  z-index: 5;
+  margin: 15px 0 0 0;
+  text-align: center;
+}
+@media screen and (max-width: 479px) {
+  /* line 156, ../sass/layout.scss */
+  body #viewport .nav_wrap #nav_link, html #viewport .nav_wrap #nav_link {
+    display: block;
+  }
+}
+/* line 164, ../sass/layout.scss */
+body #viewport .nav_wrap #nav_link a, html #viewport .nav_wrap #nav_link a {
+  vertical-align: top;
+  font-size: 16px;
+  display: inline-block;
+  line-height: 30px;
+  text-align: center;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin-right: 4px;
+}
+/* line 176, ../sass/layout.scss */
+body #viewport .nav_wrap #nav_link a i, html #viewport .nav_wrap #nav_link a i {
+  vertical-align: middle;
+}
+/* line 182, ../sass/layout.scss */
 body #viewport .bar_line, html #viewport .bar_line {
   cursor: pointer;
   z-index: 10;
@@ -174,7 +220,7 @@ body #viewport .bar_line, html #viewport .bar_line {
   right: 4%;
   width: 30px;
 }
-/* line 155, ../sass/layout.scss */
+/* line 189, ../sass/layout.scss */
 body #viewport .bar_line span, html #viewport .bar_line span {
   width: 100%;
   height: 1px;
@@ -182,11 +228,11 @@ body #viewport .bar_line span, html #viewport .bar_line span {
   background-color: white;
   margin-bottom: 10px;
 }
-/* line 161, ../sass/layout.scss */
+/* line 195, ../sass/layout.scss */
 body #viewport .bar_line span:last-child, html #viewport .bar_line span:last-child {
   margin-bottom: 0;
 }
-/* line 166, ../sass/layout.scss */
+/* line 200, ../sass/layout.scss */
 body #viewport #logo, html #viewport #logo {
   width: 192px;
   height: 38px;
@@ -197,7 +243,7 @@ body #viewport #logo, html #viewport #logo {
   top: 3.9%;
   z-index: 5;
 }
-/* line 176, ../sass/layout.scss */
+/* line 210, ../sass/layout.scss */
 body #viewport #link, html #viewport #link {
   left: 7.4%;
   position: absolute;
@@ -205,7 +251,13 @@ body #viewport #link, html #viewport #link {
   font-size: 0;
   z-index: 5;
 }
-/* line 182, ../sass/layout.scss */
+@media screen and (max-width: 479px) {
+  /* line 210, ../sass/layout.scss */
+  body #viewport #link, html #viewport #link {
+    display: none;
+  }
+}
+/* line 219, ../sass/layout.scss */
 body #viewport #link a, html #viewport #link a {
   vertical-align: top;
   font-size: 16px;
@@ -219,13 +271,12 @@ body #viewport #link a, html #viewport #link a {
   background-color: rgba(255, 255, 255, 0.5);
   margin-right: 4px;
 }
-/* line 194, ../sass/layout.scss */
+/* line 231, ../sass/layout.scss */
 body #viewport #link a i, html #viewport #link a i {
   vertical-align: middle;
 }
-/* line 199, ../sass/layout.scss */
+/* line 236, ../sass/layout.scss */
 body #viewport .content_wrap, html #viewport .content_wrap {
-  max-width: 1024px;
   height: 100%;
   margin: auto;
   position: relative;

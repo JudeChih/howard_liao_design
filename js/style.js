@@ -14,6 +14,7 @@ $(function(){
         $('.nav_wrap').animate({'right':'-'+$('.nav_wrap').width()},500);
         setTimeout(function() {
             $('.bar_line').fadeIn(250);
+            $('.nav_wrap').fadeOut(250);
         }, 250);
     })
     //主導覽列點擊滑出子導覽列

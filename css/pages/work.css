@@ -49,45 +49,107 @@
 /* line 44, ../../sass/pages/work.scss */
 #viewport .content_wrap .content_work .work_wrap {
   font-size: 0;
+  margin: 0 12.8%;
 }
-/* line 46, ../../sass/pages/work.scss */
+/* line 47, ../../sass/pages/work.scss */
 #viewport .content_wrap .content_work .work_wrap .work_item {
   cursor: pointer;
   transition: 0.5s;
   display: inline-block;
 }
-@media screen and (min-width: 1024px) {
-  /* line 46, ../../sass/pages/work.scss */
+@media screen and (min-width: 768px) {
+  /* line 47, ../../sass/pages/work.scss */
   #viewport .content_wrap .content_work .work_wrap .work_item {
-    width: 32%;
-    margin-right: 2%;
-    margin-bottom: 2%;
-  }
-  /* line 52, ../../sass/pages/work.scss */
-  #viewport .content_wrap .content_work .work_wrap .work_item:nth-child(3n) {
-    margin-right: 0;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  /* line 46, ../../sass/pages/work.scss */
-  #viewport .content_wrap .content_work .work_wrap .work_item {
-    width: 94%/3;
+    width: calc(94%/3);
     margin: 1%;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
-  /* line 46, ../../sass/pages/work.scss */
+  /* line 47, ../../sass/pages/work.scss */
   #viewport .content_wrap .content_work .work_wrap .work_item {
-    width: 32%;
+    width: 46%;
     margin-right: 2%;
-    margin-bottom: 2%;
+    margin: 0 2% 2%;
   }
 }
-/* line 74, ../../sass/pages/work.scss */
+@media screen and (max-width: 479px) {
+  /* line 47, ../../sass/pages/work.scss */
+  #viewport .content_wrap .content_work .work_wrap .work_item {
+    width: 96%;
+    margin: 2%;
+  }
+  /* line 63, ../../sass/pages/work.scss */
+  #viewport .content_wrap .content_work .work_wrap .work_item:last-child {
+    margin-bottom: 15%;
+  }
+}
+/* line 70, ../../sass/pages/work.scss */
 #viewport .content_wrap .content_work .work_wrap .work_item img {
   width: 100%;
 }
-/* line 77, ../../sass/pages/work.scss */
+/* line 73, ../../sass/pages/work.scss */
 #viewport .content_wrap .content_work .work_wrap .work_item:hover {
   box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.36);
+}
+/* line 80, ../../sass/pages/work.scss */
+#viewport .content_wrap .content_work_detail {
+  margin-top: 12%;
+  display: inline-block;
+  font-size: 0;
+  position: relative;
+}
+/* line 85, ../../sass/pages/work.scss */
+#viewport .content_wrap .content_work_detail .content_left {
+  margin-left: 11.77%;
+  vertical-align: bottom;
+  display: inline-block;
+  width: 46.87%;
+}
+/* line 90, ../../sass/pages/work.scss */
+#viewport .content_wrap .content_work_detail .content_left img {
+  width: 100%;
+}
+/* line 94, ../../sass/pages/work.scss */
+#viewport .content_wrap .content_work_detail .content_right {
+  width: 33%;
+  margin-left: 2.8%;
+  vertical-align: bottom;
+  display: inline-block;
+  position: relative;
+}
+/* line 100, ../../sass/pages/work.scss */
+#viewport .content_wrap .content_work_detail .content_right .title {
+  font-size: 24px;
+  margin-bottom: 1%;
+}
+/* line 104, ../../sass/pages/work.scss */
+#viewport .content_wrap .content_work_detail .content_right .intro {
+  font-size: 18px;
+  margin-bottom: 2.3%;
+  width: 50%;
+}
+/* line 109, ../../sass/pages/work.scss */
+#viewport .content_wrap .content_work_detail .content_right .content {
+  font-size: 18px;
+}
+@media screen and (min-width: 768px) {
+  /* line 113, ../../sass/pages/work.scss */
+  #viewport .content_wrap .content_work_detail .content_right .title {
+    font-size: 20px;
+    margin-bottom: 1%;
+  }
+  /* line 117, ../../sass/pages/work.scss */
+  #viewport .content_wrap .content_work_detail .content_right .intro, #viewport .content_wrap .content_work_detail .content_right .content {
+    font-size: 14px;
+  }
+}
+/* line 128, ../../sass/pages/work.scss */
+#viewport .content_wrap .content_work_detail .content_right .back {
+  width: 17px;
+  height: 68px;
+  background-image: url("/image/back.png");
+  position: absolute;
+  right: -4%;
+  bottom: 0;
+  cursor: pointer;
 }
